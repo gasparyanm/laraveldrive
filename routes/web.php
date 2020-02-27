@@ -15,7 +15,7 @@ Route::get('/', 'Auth\LoginController@redirectToGoogleProvider');
 
 Auth::routes();
 
-Route::get('/login', 'Auth\LoginController@redirectToGoogleProvider');
+Route::get('/login', 'Auth\LoginController@redirectToGoogleProvider')->name('login');
 Route::get('/login/google', 'Auth\LoginController@redirectToGoogleProvider');
 // works without / at the start
 Route::get('oauth2callback', 'Auth\LoginController@oauth2callback');
